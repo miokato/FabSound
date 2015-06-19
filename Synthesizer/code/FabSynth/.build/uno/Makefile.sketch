@@ -1,0 +1,14 @@
+
+
+
+
+
+.build/uno/src/FabSynth.cpp : src/FabSynth.ino
+	@mkdir -p .build/uno/src
+	@echo [93msrc/FabSynth.ino[0m
+	@/usr/local/bin/ino preproc  -o $@ $^
+
+
+all : .build/uno/src/FabSynth.cpp
+	@true
+

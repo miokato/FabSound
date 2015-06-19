@@ -1,0 +1,14 @@
+
+
+
+
+
+.build/uno/src/auduino_v5.cpp : src/auduino_v5.ino
+	@mkdir -p .build/uno/src
+	@echo [93msrc/auduino_v5.ino[0m
+	@/usr/local/bin/ino preproc  -o $@ $^
+
+
+all : .build/uno/src/auduino_v5.cpp
+	@true
+

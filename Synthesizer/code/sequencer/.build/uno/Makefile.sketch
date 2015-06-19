@@ -1,0 +1,14 @@
+
+
+
+
+
+.build/uno/src/seq_audino.cpp : src/seq_audino.ino
+	@mkdir -p .build/uno/src
+	@echo [93msrc/seq_audino.ino[0m
+	@/usr/local/bin/ino preproc  -o $@ $^
+
+
+all : .build/uno/src/seq_audino.cpp
+	@true
+
